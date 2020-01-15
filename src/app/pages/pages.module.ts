@@ -17,6 +17,8 @@ import { AccountSettingsComponent } from "./account-settings/account-settings.co
 // Components de la carpeta components
 import { IncrementadorComponent } from "../components/incrementador/incrementador.component";
 import { GraficaDonaComponent } from "../components/grafica-dona/grafica-dona.component";
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { GraficaDonaComponent } from "../components/grafica-dona/grafica-dona.co
     Graficas1Component,
     IncrementadorComponent,
     GraficaDonaComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
   imports: [SharedModule, PagesRoutingModule, FormsModule, ChartsModule]

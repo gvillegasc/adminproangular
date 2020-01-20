@@ -17,8 +17,13 @@ import { AccountSettingsComponent } from "./account-settings/account-settings.co
 // Components de la carpeta components
 import { IncrementadorComponent } from "../components/incrementador/incrementador.component";
 import { GraficaDonaComponent } from "../components/grafica-dona/grafica-dona.component";
-import { PromesasComponent } from './promesas/promesas.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
+import { PromesasComponent } from "./promesas/promesas.component";
+import { RxjsComponent } from "./rxjs/rxjs.component";
+
+// Pipe Module
+import { PipesModule } from "../pipes/pipes.module";
+import { ProfileComponent } from "./profile/profile.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -30,9 +35,17 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     GraficaDonaComponent,
     AccountSettingsComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
-  imports: [SharedModule, PagesRoutingModule, FormsModule, ChartsModule]
+  imports: [
+    CommonModule,
+    SharedModule,
+    PagesRoutingModule,
+    FormsModule,
+    ChartsModule,
+    PipesModule
+  ]
 })
 export class PagesModule {}

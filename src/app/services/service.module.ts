@@ -10,6 +10,7 @@ import {
 } from "./service.index";
 import { HttpClientModule } from "@angular/common/http";
 import { LoginGuardGuard } from "./guards/login-guard.guard";
+import { ModalUploadComponent } from "../components/modal-upload/modal-upload.component";
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,8 @@ import { LoginGuardGuard } from "./guards/login-guard.guard";
     SharedService,
     UsuarioService,
     SubirArchivoService,
-    LoginGuardGuard
+    LoginGuardGuard,
+    ModalUploadComponent
   ],
   imports: [CommonModule, HttpClientModule]
 })

@@ -1,6 +1,12 @@
+// Angular imports
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 
+// Guards
+import { LoginGuardGuard } from "./guards/login-guard.guard";
+
+// Services
 import {
   SettingsService,
   SidebarService,
@@ -9,9 +15,10 @@ import {
   HospitalService,
   SubirArchivoService
 } from "./service.index";
-import { HttpClientModule } from "@angular/common/http";
-import { LoginGuardGuard } from "./guards/login-guard.guard";
+
+// Components
 import { ModalUploadComponent } from "../components/modal-upload/modal-upload.component";
+import { AdminGuard } from "./guards/admin.guard";
 
 @NgModule({
   declarations: [],
@@ -22,8 +29,9 @@ import { ModalUploadComponent } from "../components/modal-upload/modal-upload.co
     UsuarioService,
     HospitalService,
     SubirArchivoService,
+    ModalUploadComponent,
     LoginGuardGuard,
-    ModalUploadComponent
+    AdminGuard
   ],
   imports: [CommonModule, HttpClientModule]
 })

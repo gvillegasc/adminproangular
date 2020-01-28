@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
 import { UsuarioService } from "../services/service.index";
 import { Usuario } from "src/models/usuario.model";
+import Swal from "sweetalert2";
 
 declare function init_plugins();
 declare const gapi: any;
@@ -68,7 +69,12 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl("/dashboard");
       },
       err => {
-        console.log(err.error.mensaje);
+        Swal.fire({
+          title: "Error en el login",
+          text: err.error.mensajex,
+          icon: "error"
+        });
+        // console.log(err.error.mensaje);
       }
     );
     // this.router.navigateByUrl("/dashboard");

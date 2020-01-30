@@ -5,6 +5,8 @@ import { HttpClientModule } from "@angular/common/http";
 
 // Guards
 import { LoginGuardGuard } from "./guards/login-guard.guard";
+import { AdminGuard } from "./guards/admin.guard";
+import { VerificaTokenGuard } from "./guards/verifica-token.guard";
 
 // Services
 import {
@@ -18,7 +20,6 @@ import {
 
 // Components
 import { ModalUploadComponent } from "../components/modal-upload/modal-upload.component";
-import { AdminGuard } from "./guards/admin.guard";
 
 @NgModule({
   declarations: [],
@@ -31,7 +32,8 @@ import { AdminGuard } from "./guards/admin.guard";
     SubirArchivoService,
     ModalUploadComponent,
     LoginGuardGuard,
-    AdminGuard
+    AdminGuard,
+    VerificaTokenGuard
   ],
   imports: [CommonModule, HttpClientModule]
 })
